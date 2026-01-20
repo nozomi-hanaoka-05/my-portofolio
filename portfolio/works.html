@@ -30,19 +30,22 @@
     <div class="attend">
         <h2>My Works</h2>
     </div>
+    <div class="javascript">
+        <h3>Javascript</h3>
+    </div>
     <section class="01">
-        <div class="works_grid">
+        <div class="javascript_section">
             <div class="quizapp">
-                <div class="quiz_grid">
-                    <div class="quiz_top">
+                <div class="grid_a">
+                    <div class="grid_left-a">
                         <img src="assets/img/quizapp/quiz_top.png" alt="">
                     </div>
-                    <div class="quiz_right">
+                    <div class="grid_right-a">
                         <div class="quiz_atend">
                             <h3>クイズアプリ</h3>
                             <p>全5問のクイズを解いて遊ぶアプリです。<br>
-                            途中3問目、または4問目で不正解になってしまうとゲーム終了となります。<br>
-                            見事5問目まで進むことができたら、ゲーム終了後正答数が表示されるようになっています。</p>
+                            仕様：全5問のクイズを選択し、正誤をアラートで表示。途中3問目、または4問目で不正解になってしまうとゲーム終了。<br>
+                            見事5問目まで進むことができたら、ゲーム終了後正答数が表示される。</p>
                             <p>最初の課題から要件定義自体は変えていませんが、<br>
                             最初の挑戦として途中終了後に表示される文字とゲーム終了後の文字を書き換えることをしました。<br>
                             まずはこの課題で[配列]と[クリックイベント]についてよく学びました。</p>
@@ -53,14 +56,15 @@
                     </div>
                 </div>
             </div>
+        </div>
             <div class="jankenapp">
-                <div class="janken_grid">
-                    <div class="janken_left">
+                <div class="grid_b">
+                    <div class="grid_left-b">
                         <div class="janken_attend">
                             <h3>じゃんけんアプリ</h3>
-                            <p>じゃんけん5回勝負のゲームアプリです。5回じゃんけんをコンピューターとしたら勝った回数が最後に表示されるようになっています。</p>
-                            <p>これは最初"グー","チョキ","パー"それぞれで場合分けしてMathのramdum関数で総当たりしていました。<br>
-                            そのあと要件は変わりませんがif文と条件分岐と配列でコードをリファクタリングしています。<br>
+                            <p>じゃんけん5回勝負のゲームアプリです。</p>
+                            <p>仕様："グー","チョキ","パー"それぞれで場合分けしてMathのramdum関数で総当たりするように設計。<br>
+                            そのあと要件は変更せずif文と条件分岐と配列でコードをリファクタリング。<br>
                             課題で作ったものはコードをパッと見たときにわかりやすかったです。<br>
                             リファクタリングしたときはいままでに習得した技術を使って組み上げるのに「こんな方法もあるか。」と新しい発見につながりました。</p>
                         </div>
@@ -74,16 +78,16 @@
                 </div>
             </div>
             <div class="memoapp">
-                <div class="memo_grid">
+                <div class="grid">
                     <div class="memo_top">
                         <img src="assets/img/memo/memoapp_top.png" alt="">
                     </div>
-                    <div class="memo_right">
+                    <div class="grid_right">
                         <div class="memo_attend">
                             <h3 class="memo_p">メモパッドアプリ</h3>
-                            <p>上の入力欄にタイトルを。下の入力欄にテキストを入力して"Save"をクリックすると入力欄下にタイトルとメモの内容がリストとなって表示されます。<br>
-                            メモは各リスト右にある"削除"ボタンをクリックで削除できます。"Clear"ボタンをクリックするとすべてのリストが削除されます。<br>
-                            また、このメモの内容はブラウザのローカルストレージに保存することができ、同時に削除もできます。</p>
+                            <p>仕様：上の入力欄にタイトルを。下の入力欄にテキストを入力。"Save"をクリックすると入力欄下にタイトルとメモの内容がリストとなって表示される。<br>
+                            メモは各リスト右にある"削除"ボタンをクリックで削除できる。"Clear"ボタンをクリックするとすべてのリストが削除される。<br>
+                            また、このメモの内容はブラウザのローカルストレージに保存することができ、同時に削除もできる。</p>
                             <p>最初はローカルストレージは何に使うんだ？と存在を不思議に感じていましたが、<br>
                             メッセージアプリの記録保存やゲームの進捗保存など様々な場面で利用されていることを知ってとても身近に感じました。今後このページで紹介している「じゃんけんアプリ」などで応用できるなと考えています。</p>
                         </div>
@@ -101,7 +105,7 @@
                     <div class="canvas_attend">
                         <h3>お絵描きアプリ</h3>
                         <p>その名の通りマウスクリックで線を引くことができ、自由に絵を描くことができます。<br>
-                        スライドバーで線の太さ。その横のカラーピッカーで色の指定をできます。</p>
+                        仕様：描画範囲からマウスが離れたときに線を描くのをやめる。スライドバーで線の太さ。その横のカラーピッカーで色の指定をできる。</p>
                         <p>課題をやっていて難しかったのは描画できるエリアからマウスが出たときに線を引くのをやめる制御をかけることでした。<br>
                         全体的に細かい制御をかけるのに苦戦しましたがそこが楽しかったです。</p>
                     </div>
@@ -118,7 +122,7 @@
                     <div class="udedameshiapp_right">
                         <div class="udedameshiapp_attend">
                             <h3>腕試し課題</h3>
-                            <p>タイトルに適当なサイトの名前。URLの入力欄にそのサイトのURLを入力して追加するとリストとして表示され、ローカルストレージにも保存されるようになっています。<br>
+                            <p>仕様：タイトルに適当なサイトの名前。URLの入力欄にそのサイトのURLを入力して追加するとリストとして表示され、ローカルストレージにも保存される。<br>
                             一見メモアプリと似ているように見えますが、難しかったの1つのデータにタイトルとURLの値を同時に配列して保存することでした。<br>
                             「JSON を使用して配列を文字列に変換する」ことをヒントに、今まで習得したif文やローカルストレージへの保存方法を使ってなんとか作り上げることができました。<br>
                             今まで習得したものの総復習のような課題でした。</p>
@@ -131,6 +135,34 @@
                 </div>
             </div>
         </div>
+    </section>
+    <div class="line_work"></div>
+    <section class="02">
+        <div class="php">
+            <h3>PHP</h3>
+        </div>
+        <div class="php_created">
+            <div class="php_mail">
+                <div class="quiz_grid">
+                    <div class="quiz_top">
+                        <img src="assets/img/quizapp/quiz_top.png" alt="">
+                    </div>
+                    <div class="quiz_right">
+                        <div class="quiz_atend">
+                            <h3>クイズアプリ</h3>
+                            <p>全5問のクイズを解いて遊ぶアプリです。<br>
+                            仕様：全5問のクイズを選択し、正誤をアラートで表示。途中3問目、または4問目で不正解になってしまうとゲーム終了。<br>
+                            見事5問目まで進むことができたら、ゲーム終了後正答数が表示される。</p>
+                            <p>最初の課題から要件定義自体は変えていませんが、<br>
+                            最初の挑戦として途中終了後に表示される文字とゲーム終了後の文字を書き換えることをしました。<br>
+                            まずはこの課題で[配列]と[クリックイベント]についてよく学びました。</p>
+                        </div>
+                        <div class="more">
+                            <div class="more_jump"><a href="https://fuji.jobtra-itweb.com/quiz_re/quiz02.html">MORE</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
     <footer>
         <div class="link"><a href="index.html">TOP</a></div>
