@@ -1,0 +1,685 @@
+@charset "UTF-8";
+/* ====================
+common
+==================== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: 62.5%;;
+}
+
+body {
+    font-family:  "Noto Sans JP",
+                  "Titillium Web",
+                  Arial,
+                  sans-serif;
+    color: #2f2f2f;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section__topic {
+    color: #2F2F2F;
+    text-align: center;
+    font-family: Arial;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.3; 
+}
+
+/* ====================
+header
+==================== */
+body {
+  padding-top: 200px; 
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 60px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: rgba(245, 245, 245, 0.3);
+}
+
+.logo {
+  width: 280px;
+  height: 60px;
+}
+
+.myName {
+  color: #2F2F2F;
+  font-size: 7rem;
+  font-weight: 700;
+  margin-left: 8vw;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  margin-right: 8vw;
+}
+
+.nav_item {
+  display: block;
+  list-style: none;
+  font-size: 4rem;
+  font-weight: 500;
+  margin-right: 8px;
+  border: none;
+  line-height: 1;
+}
+
+/* ====================
+main
+==================== */
+#prof {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 60px;
+}
+
+.prof_div {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 400px;
+}
+
+.title {
+  width: 300px;
+  height: auto;
+  color: #2F2F2F;
+  font-size: 7rem;
+  font-weight: 700;
+}
+
+.title > h2 {
+  width: 600px;
+  height: auto;
+}
+
+.prof_right {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 70px;
+}
+
+.prof_right img {
+  position: relative;
+  z-index: 2000;
+  width: 600px;
+  height: 600px;
+}
+/* ====================
+work
+==================== */
+.work_space {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 80px 60px;
+  background-color: #b8860b;
+}
+
+.work_item {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.work_item img {
+  width: 18%;
+  height: 20%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.work_item img:hover {
+  transform: scale(1.05);
+}
+
+.my_work {
+  color: #2F2F2F;
+  font-size: 5rem;
+  font-weight: 700;
+  width: 250px;
+  padding: 20px;
+}
+
+.work_btn {
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  border: #2F2F2F  3px solid;
+  border-radius: 6px;
+  background-color: #FFF;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+#work_jump {
+  color: #2F2F2F;
+  font-family: "Titillium Web";
+  font-size: 9rem;
+  font-weight: 900;
+}
+
+
+
+/* ====================
+profile
+==================== */
+#mine {
+  width: 100%;;
+  margin: 0 auto;
+  padding: 80px 60px;
+  background-color: #f5f5f5;
+}
+
+.pro_h2 {
+  display: block;
+  width: 200px;
+  height: auto;
+  color: #2F2F2F;
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 20px;
+}
+
+.pro_name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 30px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.name_01 {
+  display: block;
+  color: #2F2F2F;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.name_02 {
+  display: block;
+  color: #2F2F2F;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.prof_me {
+  width: 90%;
+  height: auto;
+  margin: 30px 0 0 40px;
+  color: #2F2F2F;
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.mine_me {
+  width: 100%;;
+  margin: 0 auto;
+  padding: 30px 30px;
+  background-color: #f5f5f5;
+}
+
+.my_love01 {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 10px 0;
+  flex-wrap: nowrap;
+  background-color: #f5f5f5;
+}
+
+.accordion_item {
+  flex: 1;
+  background: #fff;
+  font-size: 2rem;
+  margin: 0;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 0;
+}
+
+.accordion_title {
+  color: #2F2F2F;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.accordion_content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  padding: 0 10px;
+}
+
+.accordion_content p {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.my_love02 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f5f5f5;
+}
+
+.my_love02 {
+  padding-top: 30px;
+}
+
+.mine_me h3,
+.my_love02 h3 {
+  color: #2F2F2F;
+  font-size: 4rem;
+  margin-left: 10px;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.my_love02_p {
+  color: #2F2F2F;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.my_love02 > p {
+  color: #2F2F2F;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.skill_title {
+  display: block;
+  width: 200px;
+  height: auto;
+  color: #2F2F2F;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.skill_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.skill_item img{
+  width: 200px;
+  height: 200px;
+}
+
+.line {
+  width: 90%;
+  height: 10px;
+  border-bottom: #2F2F2F 2px solid;
+  margin: 30px auto 0;
+  
+}
+/* ----------------------- */
+/* works.html */
+/* ----------------------- */
+.attend {
+  width: 100%;;
+  margin: 0 auto;
+  padding: 60px 60px;
+  margin-top: 10px;
+  background-color: #FFF;
+}
+
+.attend h2 {
+  color: #2F2F2F;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.attend p {
+  color: #2F2F2F;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.javascript {
+  width: 100%;;
+  margin: 0 auto;
+  padding: 40px 60px;
+  margin-top: 10px;
+}
+
+.javascript h3{
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.quiz {
+  width: 100%;;
+  margin: 0 auto;
+  padding: 80px 60px;
+  margin-top: 10px;
+}
+
+/* more btn */
+.more {
+  width: 200px;
+  height: 90px;
+  margin: 0 auto;
+  text-align: center;
+  border: #2F2F2F  3px solid;
+  border-radius: 6px;
+  background-color: #FFF;
+  margin-top: 30px;
+}
+
+.more_jump {
+  color: #2F2F2F;
+  font-family: "Titillium Web";
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.more,
+.more_jump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ====================
+quiz app
+==================== */
+.quizapp {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.grid_a {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 600px; 
+  grid-auto-flow: column;   
+  width: 100%;
+  min-height: 600px;
+}
+
+
+.grid_left-a {
+  display: block !important;
+  grid-column: 1 / 2;
+  width: 100%;        
+  height: 100%;
+  padding: 0;        
+  margin: 0;
+}
+
+.grid_left-a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;      
+}
+
+.grid_right-a {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 60% 40%; 
+  height: 100%;
+}
+
+.quiz_atend {
+  padding: 60px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.atend h3 {
+  color: #2F2F2F;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.atend p {
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* ====================
+janken app 作品左
+==================== */
+.jankenapp {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  padding: 80px 60px;
+  background-color: #f5f5f5;
+}
+
+.grid_b {
+  display: grid;
+  grid-template-columns: 40% 60%; /* 左60%, 右40% */
+  grid-auto-flow: column;
+  width: 100%;
+  min-height: 600px;
+}
+
+.grid_left-b {
+  display: grid;
+  grid-template-rows: 60% 40%; /* 上60%テキスト, 下40%リンク */
+  min-height: 600px;
+}
+
+.janken_attend {
+  padding: 60px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.janken_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / 3; /* 右列のみ */
+  grid-row: 1 / 3;    /* 上下両方を占める */
+  margin-left: 20px;
+}
+
+.janken_top img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* 必要なら */
+}
+/* ====================
+memo app　作品右
+==================== */
+.memoapp {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.grid_left-a img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ====================
+canvas app　作品左
+==================== */
+.canvasapp {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 60px;
+  background-color: #f5f5f5;
+}
+
+.attend {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.canvas_top {
+  margin-left: 100px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;    
+}
+
+.canvas_top img {
+  width: 50%;
+  height: auto;
+  display: block;
+  object-fit: cover; 
+}
+
+
+
+/* ====================
+udedameshi app　作品右
+==================== */
+.udedameshiapp {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.grid_a {
+  display: grid;
+  grid-template-columns: 60% 40%; 
+  width: 100%;
+  height: 500px;
+}
+
+.grid_left-a {
+  grid-column: 1 / 2;
+  height: 100%;
+  padding: 40px;
+}
+
+.grid_left-a img {
+  display: block;
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+  margin-left: 90px;
+}
+
+/* 右カラムを内部で上下分割 */
+.grid_right-a {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 60% 40%; 
+  height: 100%;
+}
+
+.attend {
+  grid-row: 1 / 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line_work {
+  border-bottom: #b8860b 15px dashed;
+}
+
+/* ====================
+php
+==================== */
+.php {
+  width: 100%;;
+  margin: 0 auto;
+  padding: 40px 60px;
+  margin-top: 10px;
+}
+
+.php h3{
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+
+/* ====================
+footer
+==================== */
+footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 80px;
+  background-color: #b8860b;
+}
+
+footer > p {
+  width: 500px;
+  height: auto;
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.link {
+  width: 500px;
+  height: auto;
+  font-family: "Titillium Web";
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 0 auto;
+  text-align: center;
+  border: #2F2F2F 2px solid;
+  border-radius: 2px;
+  background-color: #FFF;
+}
