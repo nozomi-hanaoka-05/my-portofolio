@@ -367,7 +367,7 @@ profile
   margin: 0 auto;
   padding: 60px 60px;
   margin-top: 10px;
-  background-color: #b8860b;
+  background-color: #FFF;
 }
 
 .attend h2 {
@@ -420,6 +420,13 @@ profile
   font-weight: 900;
 }
 
+.more,
+.more_jump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* ====================
 quiz app
@@ -433,11 +440,12 @@ quiz app
 .grid_a {
   display: grid;
   grid-template-columns: 60% 40%;
-  grid-template-rows: 600px; /* 高さを1行分に固定 */
-  grid-auto-flow: column;   /* 要素を横にしか並べない設定 */
+  grid-template-rows: 600px; 
+  grid-auto-flow: column;   
   width: 100%;
   min-height: 600px;
 }
+
 
 .grid_left-a {
   display: block !important;
@@ -455,12 +463,10 @@ quiz app
   display: block;      
 }
 
-
-/* 右カラムを内部で上下分割 */
 .grid_right-a {
   grid-column: 2 / 3;
   display: grid;
-  grid-template-rows: 60% 40%; /* 上60%テキスト, 下40%リンク */
+  grid-template-rows: 60% 40%; 
   height: 100%;
 }
 
@@ -471,25 +477,19 @@ quiz app
   justify-content: center;
 }
 
-.quiz_atend h3 {
+.atend h3 {
+  color: #2F2F2F;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.atend p {
+  margin-top: 10px;
   color: #2F2F2F;
   font-size: 2rem;
   font-weight: 500;
 }
 
-.quiz_atend p {
-  margin-top: 10px;
-  color: #2F2F2F;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.more,
-.more_jump {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /* ====================
 janken app 作品左
 ==================== */
@@ -502,17 +502,18 @@ janken app 作品左
   background-color: #f5f5f5;
 }
 
-.grid_left-b {
+.grid_b {
   display: grid;
   grid-template-columns: 40% 60%; /* 左60%, 右40% */
+  grid-auto-flow: column;
   width: 100%;
-  height: 600px;
+  min-height: 600px;
 }
 
-.janken_left-b {
+.grid_left-b {
   display: grid;
-  grid-template-rows: 360px 240px; /* 上60%テキスト, 下40%リンク */
-  height: 100%;
+  grid-template-rows: 60% 40%; /* 上60%テキスト, 下40%リンク */
+  min-height: 600px;
 }
 
 .janken_attend {
@@ -520,34 +521,6 @@ janken app 作品左
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-row: 1;
-}
-
-.janken_attend h3 {
-  color: #2F2F2F;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.janken_attend p{
-  margin-top: 10px;
-  color: #2F2F2F;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.more_jump {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-row: 2;
-  margin-top: 30px;
 }
 
 .janken_top {
@@ -560,10 +533,9 @@ janken app 作品左
 }
 
 .janken_top img {
-  width: 90%;
+  max-width: 100%;
   height: auto;
-  display: block;
-  object-fit: cover; /* 必要なら */
+  display: block; /* 必要なら */
 }
 /* ====================
 memo app　作品右
@@ -574,56 +546,9 @@ memo app　作品右
   padding: 30px;
 }
 
-.memo_grid {
-  display: grid;
-  grid-template-columns: 60% 40%; /* 左60%, 右40% */
-  width: 100%;
-  height: 600px;
-}
-
-.memo_top {
-  grid-column: 1 / 2;
-  height: 100%;
-}
-
-.memo_top img {
+.grid_left-a img {
   width: 100%;
   height: 100%;
-}
-
-/* 右カラムを内部で上下分割 */
-.memo_right {
-  grid-column: 2 / 3;
-  display: grid;
-  grid-template-rows: 60% 40%; /* 上60%テキスト, 下40%リンク */
-  height: 100%;
-}
-
-.memo_attend {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.memo_attend h3 {
-  color: #2F2F2F;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.memo_attend p{
-  margin-top: 10px;
-  color: #2F2F2F;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.more,
-.more_jump {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* ====================
@@ -637,39 +562,10 @@ canvas app　作品左
   background-color: #f5f5f5;
 }
 
-.canvas_grid {
-  display: grid;
-  width: 100%;
-  height: 600px;
-  grid-template-columns: 40% 60%;
-  grid-auto-rows: 60% 40%;
-}
-
-.canvas_attend {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  margin: 20px;
+.attend {
   padding: 20px;
-}
-
-.canvas_attend h3 {
-  color: #2F2F2F;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.canvas_attend p {
-  margin-top: 10px;
-  color: #2F2F2F;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.more {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -697,20 +593,20 @@ udedameshi app　作品右
   padding: 30px;
 }
 
-.udedameshiapp_grid {
+.grid_a {
   display: grid;
   grid-template-columns: 60% 40%; 
   width: 100%;
   height: 500px;
 }
 
-.local_top {
+.grid_left-a {
   grid-column: 1 / 2;
   height: 100%;
   padding: 40px;
 }
 
-.local_top img {
+.grid_left-a img {
   display: block;
   width: 60%;
   height: auto;
@@ -719,44 +615,18 @@ udedameshi app　作品右
 }
 
 /* 右カラムを内部で上下分割 */
-.udedameshiapp_right {
+.grid_right-a {
   grid-column: 2 / 3;
   display: grid;
   grid-template-rows: 60% 40%; 
   height: 100%;
 }
 
-.udedameshiapp_attend {
+.attend {
   grid-row: 1 / 2;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.udedameshiapp_attend h3 {
-  color: #2F2F2F;
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.udedameshiapp_attend p {
-  margin-top: 10px;
-  color: #2F2F2F;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.more_jump {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.more {
-  grid-row: 2 / 3;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
