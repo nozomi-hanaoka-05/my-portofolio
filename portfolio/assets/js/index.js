@@ -40,3 +40,20 @@ titles.forEach((title) => {
     }
   });
 });
+
+// ---Workアコーディオンの挙動--- //
+$(function() {
+  $('.nav_item').on('click', function(){
+    const $targetNav = $(this).find('.work_nav');
+    $targetNav.toggleClass('active');
+  });
+});
+
+// --navそれぞれのジャンプ先-- //
+$("#javascript").click(function(){
+    window.location.href = "works.html";
+})
+
+$("#php").click(function(){
+    window.location.href = "works.html";
+})
