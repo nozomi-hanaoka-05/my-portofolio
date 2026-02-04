@@ -217,7 +217,18 @@ profile
   align-items: baseline;
   gap: 30px;
   margin-top: 30px;
-  margin-left: 20px;
+}
+
+.phot {
+  width: 300px;
+  align-items: baseline;
+}
+
+.my_phot {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .name_01 {
@@ -225,6 +236,7 @@ profile
   color: #2F2F2F;
   font-size: 4rem;
   font-weight: 700;
+  margin-left: 0;
 }
 
 .name_02 {
