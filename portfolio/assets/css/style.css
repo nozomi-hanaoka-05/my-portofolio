@@ -777,7 +777,7 @@ udedameshi app　作品右
 }
 
 /* ====================
-php
+works_p.html
 ==================== */
 .php {
   width: 100%;;
@@ -789,6 +789,76 @@ php
 .php h3{
   font-size: 4rem;
   font-weight: 500;
+}
+
+/* ====================
+php mail
+==================== */
+.php_mail {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.grid_a {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 600px; /* 高さを1行分に固定 */
+  grid-auto-flow: column;   /* 要素を横にしか並べない設定 */
+  width: 100%;
+  min-height: 600px;
+}
+
+.grid_left-a {
+  display: block !important;
+  grid-column: 1 / 2;
+  width: 100%;        
+  height: 100%;
+  padding: 0;        
+  margin: 0;
+}
+
+.grid_left-a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;      
+}
+
+
+/* 右カラムを内部で上下分割 */
+.grid_right-a {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 60% 40%; /* 上60%テキスト, 下40%リンク */
+  height: 100%;
+}
+
+.quiz_atend {
+  padding: 60px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.phpmail_atend h3 {
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.phpmail_atend p {
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.more,
+.more_jump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
