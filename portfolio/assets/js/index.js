@@ -15,7 +15,7 @@ $(function(){
         const path = window.location.pathname;
         // このページの中に#mineがあるかチェック
         // index.htmlの#mineへジャンプ
-        if(path.includes('works.html')){
+        if(path.includes('works.html','works_p.html')){
         e.preventDefault();
         window.location.href = 'index.html#mine';
     };
