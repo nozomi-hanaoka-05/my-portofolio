@@ -47,12 +47,15 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
+  height: auto;
   margin: 0 auto;
   padding: 60px 60px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  z-index: 2100;
   background-color: rgba(245, 245, 245, 0.3);
+  overflow: visible;
 }
 
 .logo {
@@ -77,11 +80,17 @@ body {
 }
 
 .nav_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  overflow: visible;
+}
+
+.nav_item a {
   display: block;
   list-style: none;
   font-size: 4rem;
   font-weight: 600;
-  margin-right: 8px;
   border: none;
   line-height: 1;
 }
@@ -93,21 +102,39 @@ body {
   line-height: 1;
 }
 
+.nav_item a, 
+.accordion_title {
+  margin: 0; 
+  padding: 0;
+  display: block; 
+}
+
 /* アコーディオンの中身の初期状態 */
 .accordion_content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out; /* スルスル動くアニメーション */
     display: flex;
-    flex-direction: column; /* 縦に並べる */
-    padding-left: 10px;    /* 少し右にずらすと見やすい */
+    flex-direction: column;
+    visibility: hidden; 
+    padding-left: 10px;
+    z-index: 2100;
+    opacity: 0; 
+    pointer-events: none; 
+    transition: max-height 0.3s ease-out, opacity 0.3s;
 }
 
-/* リンクのデザイン（任意） */
+.accordion_content.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; 
+}
+
 .nav_sub_item a {
-    font-size: 0.9em;
-    padding: 5px 0;
-    display: block;
+  position: relative;
+  font-size: 3rem;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 0;
 }
 
 /* ====================
@@ -149,7 +176,7 @@ main
 
 .prof_right img {
   position: relative;
-  z-index: 2000;
+  z-index: 1000;
   width: 600px;
   height: 600px;
 }
@@ -381,11 +408,6 @@ profile
   align-items: center;
   gap: 30px;
   padding: 20px;
-}
-
-.skill_item img{
-  width: 200px;
-  height: 200px;
 }
 
 .line {

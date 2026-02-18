@@ -4,11 +4,6 @@ $(".myName").click(function(){
             window.location.href = "index.html";
         })
 
-// ---works.htmlへジャンプ 
-$("#work_jump").click(function(){
-    window.location.href = "works.html";
-})
-
 // ---navのプロフィールクリックでindex.htmlのmineへ
 $(function(){
     $('[href="#mine"]').on("click", function(e){
@@ -27,16 +22,22 @@ $(function(){
 const titles = document.querySelectorAll(".accordion_title");
 
 titles.forEach((title) => {
-  title.addEventListener("click", () => {
+  title.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation(); // 親要素へのイベント伝播を止める
+
     const content = title.nextElementSibling;
 
-    // 1つだけ開閉したい → クリックしたコンテンツだけ操作する
-    if (content.style.maxHeight) {
-      // 開いていたら閉じる
-      content.style.maxHeight = null;
-    } else {
-      // 閉じていたら開く
+    // クラスを切り替える
+    content.classList.toggle("is-open");
+
+    // 開閉のロジック
+    if (content.classList.contains("is-open")) {
       content.style.maxHeight = content.scrollHeight + "px";
+      content.style.opacity = "1"; // 明示的に操作
+    } else {
+      content.style.maxHeight = "0px";
+      content.style.opacity = "0";
     }
   });
 });
