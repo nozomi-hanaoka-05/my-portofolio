@@ -49,7 +49,7 @@ body {
   width: 100vw;
   height: auto;
   margin: 0 auto;
-  padding: 60px 60px;
+  padding: 60px 60px 50px 60px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -137,6 +137,10 @@ body {
   padding: 5px 0;
 }
 
+@media screen and (max-widh:375px) {
+  
+}
+
 /* ====================
 main
 ==================== */
@@ -177,8 +181,14 @@ main
 .prof_right img {
   position: relative;
   z-index: 1000;
-  width: 600px;
-  height: 600px;
+  width: 60vw;
+  height: 80vh;
+}
+
+@media screen and (min-widh:1028px) {
+  .prof_img img {
+    display: none;
+}
 }
 /* ====================
 work
@@ -355,15 +365,12 @@ profile
   margin: 10px 0;
 }
 
+.mine
 .my_love02 {
   width: 100%;
   margin: 0 auto;
   padding: 30px;
   background-color: #f5f5f5;
-}
-
-.my_love02 {
-  padding-top: 30px;
 }
 
 .mine_me h3,
@@ -643,7 +650,7 @@ memo app　作品 右
 }
 
 .memo_attend {
-  padding: 20px;
+  padding: 60px 30px 30px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -685,7 +692,7 @@ canvas app　作品  左
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   margin: 20px;
-  padding: 20px;
+  padding: 60px 30px 30px 30px;
 }
 
 .canvas_attend h3 {
@@ -810,7 +817,7 @@ works_p.html
 }
 
 /* ====================
-php mail
+php mail  作品左
 ==================== */
 .php_mail {
   width: 100%;
@@ -818,51 +825,18 @@ php mail
   padding: 30px;
 }
 
-.grid_a {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  grid-template-rows: 600px; /* 高さを1行分に固定 */
-  grid-auto-flow: column;   /* 要素を横にしか並べない設定 */
-  width: 100%;
-  min-height: 600px;
-}
-
-.grid_left-a {
-  display: block !important;
-  grid-column: 1 / 2;
-  width: 100%;        
-  height: 100%;
-  padding: 0;        
-  margin: 0;
-}
-
 .grid_left-a img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;      
-}
-
-
-/* 右カラムを内部で上下分割 */
-.grid_right-a {
-  grid-column: 2 / 3;
-  display: grid;
-  grid-template-rows: 60% 40%; /* 上60%テキスト, 下40%リンク */
-  height: 100%;
-}
-
-.quiz_atend {
-  padding: 60px 30px 30px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .phpmail_atend h3 {
   color: #2F2F2F;
   font-size: 2rem;
   font-weight: 500;
+  padding: 20px 30px;
 }
 
 .phpmail_atend p {
@@ -870,6 +844,7 @@ php mail
   color: #2F2F2F;
   font-size: 1.5rem;
   font-weight: 500;
+  padding: 20px 50px;
 }
 
 .more,
@@ -877,6 +852,45 @@ php mail
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ====================
+php form　作品右
+==================== */
+
+.form_attend {
+  padding: 60px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_top img {
+  object-fit: cover;
+}
+
+.form_attend h3 {
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 20px 30px;
+}
+
+.form_attend p {
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 20px 50px;
+}
+
+.grid_b-form {
+  display: grid;
+  grid-template-columns: 60% 40%; 
+  width: 100%;
+  align-items: center;
+  height: 900px;
+  background-color: #f5f5f5;
 }
 
 

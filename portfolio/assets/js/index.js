@@ -6,15 +6,14 @@ $(".myName").click(function(){
 
 // ---navのプロフィールクリックでindex.htmlのmineへ
 $(function(){
-    $('[href="#mine"]').on("click", function(e){
+    $('[href="#profile"]').on("click", function(e){
         const path = window.location.pathname;
-        // このページの中に#mineがあるかチェック
-        // index.htmlの#mineへジャンプ
-        if(path.includes('works.html','works_p.html')){
-        e.preventDefault();
-        window.location.href = 'index.html#mine';
-    };
-   
+
+        // いずれかのページに含まれているかチェック
+        if(path.includes('works.html') || path.includes('works_p.html')){
+            e.preventDefault();
+            window.location.href = 'index.html#mine';
+        }
     });
 });
 

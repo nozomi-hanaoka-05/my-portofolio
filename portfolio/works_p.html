@@ -15,17 +15,22 @@
     <link rel="stylesheet" href="assets/css/destyle.min.css">
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
 </head>
 <body>
 <header class="header">
-<div class="logo">
-    <h1 class="myName">N.H</h1>
-</div>
-<nav class="nav">
-    <div class="nav_item"><a href="#work_space">Work</a></div>
-    <div class="nav_item"><a href="#mine">Profile</a></div>
-</nav>
+    <div class="logo">
+        <h1 class="myName">N.H</h1>
+    </div>
+    <nav class="nav">
+        <div class="nav_item">
+            <a href="javascript:void(0)" class="accordion_title">Work</a>
+            <div class="accordion_content">
+                <div class="nav_sub_item"><a href="works.html">JavaScript</a></div>
+                <div class="nav_sub_item"><a href="works_p.html">PHP</a></div>
+            </div>
+        </div>
+        <div class="nav_item"><a href="#profile">Profile</a></div>
+    </nav>
 </header>
     <div class="attend">
         <h2>My Works</h2>
@@ -39,48 +44,55 @@
                 <div class="grid_a">
                     <div class="grid_left-a">
                         <img src="assets/img/php_mail/php_mailf_1.png" alt="">
-                        <img src="assets/img/php_mail/php_mailf_2.png" alt="">
                     </div>
                     <div class="grid_right-a">
                         <div class="phpmail_atend">
                             <h3>メールフォーム</h3>
                             <p>仕様：飲食店の予約フォームメール送信を想定。<br>
                             スピンボタンで人数を整数で5人まで選択できるように設定。名前、人数、メールアドレスそれぞれどれか１つでも未入力であればエラー表示させる。<br>
-                            送信されるメールは予約フォームに記載の内容を反映されたメールを送信されるように設定。</p>
-                            <p>初めてのフォームづくりでした。いままでは<br>
+                            送信されるメールは予約フォームに記載の内容を反映されたメールを送信されるように設定。
+                            初めてのフォームづくりでした。いままでは<br>
                             。</p>
                         </div>
                         <div class="more">
-                            <div class="more_jump"><a href="https://fuji.jobtra-itweb.com/quiz_re/quiz02.html">MORE</a></div>
+                            <div class="more_jump"><a href="https://fuji.jobtra-itweb.com/mailform/mail01.php" target="_blank">MORE</a></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-            <div class="jankenapp">
-                <div class="grid_b">
+            <div class="form_app">
+                <div class="grid_b-form">
                     <div class="grid_left-b">
-                        <div class="janken_attend">
-                            <h3>じゃんけんアプリ</h3>
-                            <p>じゃんけん5回勝負のゲームアプリです。</p>
-                            <p>仕様："グー","チョキ","パー"それぞれで場合分けしてMathのramdum関数で総当たりするように設計。<br>
-                            そのあと要件は変更せずif文と条件分岐と配列でコードをリファクタリング。<br>
-                            課題で作ったものはコードをパッと見たときにわかりやすかったです。<br>
-                            リファクタリングしたときはいままでに習得した技術を使って組み上げるのに「こんな方法もあるか。」と新しい発見につながりました。</p>
+                        <div class="form_attend">
+                            <h3>アンケートフォーム</h3>
+                            <p>仕様：MySQLにてテーブルを設計。<br>
+                               アンケート入力画面を作った後に管理画面を作り、入力内容の確認・編集・削除ができるようにする。<br>
+                             入力に不備があった場合にはエラーを表示する。その後バリデーション機能を追加実装。<br><br>
+                             テーブル設計<br>
+                                   id ID, INT 型<br>
+                                   name お名前, VARCHAR 型(255)<br>
+                                   area お住まい, INT 型<br>
+                                   age 年代, INT 型<br>
+                                   know_from 製品を知った場所, VARCHAR 型(255)<br>
+                                   comment ご意見・ご要望, TEXT 型, ALLOW NULL<br>
+                                   created_at 作成日時, DATETIME 型<br><br>
+                            まずは完成品の全体像をイメージするのが難しかったなと思います。
+                            </p>
                         </div>
                         <div class="more">
                             <div class="more_jump"><a href="https://fuji.jobtra-itweb.com/janken02/janken_re.html">MORE</a></div>
                         </div>
                     </div>
-                    <div class="janken_top">
-                        <img src="assets/img/janken/jankenapp_top.png" alt="">
+                    <div class="form_top">
+                        <img src="assets/img/an_form-php/form.png" alt="アンケートフォームTOPの画像">
                     </div>
                 </div>
             </div>
             <div class="memoapp">
                 <div class="grid">
                     <div class="memo_top">
-                        <img src="assets/img/memo/memoapp_top.png" alt="">
+                        <img src="" alt="">
                     </div>
                     <div class="grid_right">
                         <div class="memo_attend">
