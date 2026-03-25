@@ -231,14 +231,14 @@ work
 }
 
 .work_btn {
-  width: 700px;
+  width: 500px;
   height: auto;
   margin: 0 auto;
   text-align: center;
   border: #2F2F2F  3px solid;
-  border-radius: 6px;
+  border-radius: 55px;
   background-color: #FFF;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
   cursor: pointer;
 }
@@ -246,7 +246,7 @@ work
 #work_jump {
   color: #2F2F2F;
   font-family: "Titillium Web";
-  font-size: 9rem;
+  font-size: 6rem;
   font-weight: 900;
 }
 
@@ -424,6 +424,7 @@ profile
   margin: 30px auto 0;
   
 }
+
 /* ----------------------- */
 /* works.html */
 /* ----------------------- */
@@ -916,14 +917,14 @@ footer > p {
 }
 
 .link {
-  width: 500px;
+  width: 300px;
   height: auto;
   font-family: "Titillium Web";
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 auto;
   text-align: center;
   border: #2F2F2F 2px solid;
-  border-radius: 2px;
+  border-radius: 55px;
   background-color: #FFF;
 }
