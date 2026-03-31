@@ -47,13 +47,19 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
+  height: auto;
   margin: 0 auto;
-  padding: 60px 60px;
+  padding: 60px 60px 50px 60px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  z-index: 2100;
   background-color: rgba(245, 245, 245, 0.3);
+<<<<<<< HEAD
   z-index: 3000;
+=======
+  overflow: visible;
+>>>>>>> works_php
 }
 
 .logo {
@@ -72,16 +78,26 @@ body {
 .nav {
   display: flex;
   justify-content: flex-start;
+<<<<<<< HEAD
+=======
+  align-items: flex-start;
+>>>>>>> works_php
   gap: 50px;
   margin-right: 8vw;
 }
 
 .nav_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  overflow: visible;
+}
+
+.nav_item a {
   display: block;
   list-style: none;
   font-size: 4rem;
-  font-weight: 500;
-  margin-right: 8px;
+  font-weight: 600;
   border: none;
   line-height: 1;
   cursor: pointer;
@@ -105,6 +121,52 @@ body {
 
 .work_nav.active {
   height: auto;
+}
+
+.accordion_title {
+  font-size: 4rem;
+  font-weight: 600;
+  border: none;
+  line-height: 1;
+}
+
+.nav_item a, 
+.accordion_title {
+  margin: 0; 
+  padding: 0;
+  display: block; 
+}
+
+/* アコーディオンの中身の初期状態 */
+.accordion_content {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden; 
+    padding-left: 10px;
+    z-index: 2100;
+    opacity: 0; 
+    pointer-events: none; 
+    transition: max-height 0.3s ease-out, opacity 0.3s;
+}
+
+.accordion_content.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto; 
+}
+
+.nav_sub_item a {
+  position: relative;
+  font-size: 3rem;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+@media screen and (max-widh:375px) {
+  
 }
 
 /* ====================
@@ -146,9 +208,15 @@ main
 
 .prof_right img {
   position: relative;
-  z-index: 2000;
-  width: 600px;
-  height: 600px;
+  z-index: 1000;
+  width: 60vw;
+  height: 80vh;
+}
+
+@media screen and (min-widh:1028px) {
+  .prof_img img {
+    display: none;
+}
 }
 /* ====================
 work
@@ -191,14 +259,14 @@ work
 }
 
 .work_btn {
-  width: 700px;
+  width: 500px;
   height: auto;
   margin: 0 auto;
   text-align: center;
   border: #2F2F2F  3px solid;
-  border-radius: 6px;
+  border-radius: 55px;
   background-color: #FFF;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
   cursor: pointer;
 }
@@ -206,7 +274,7 @@ work
 #work_jump {
   color: #2F2F2F;
   font-family: "Titillium Web";
-  font-size: 9rem;
+  font-size: 6rem;
   font-weight: 900;
 }
 
@@ -238,7 +306,18 @@ profile
   align-items: baseline;
   gap: 30px;
   margin-top: 30px;
-  margin-left: 20px;
+}
+
+.phot {
+  width: 300px;
+  align-items: baseline;
+}
+
+.my_phot {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .name_01 {
@@ -246,6 +325,7 @@ profile
   color: #2F2F2F;
   font-size: 4rem;
   font-weight: 700;
+  margin-left: 0;
 }
 
 .name_02 {
@@ -314,15 +394,12 @@ profile
   margin: 10px 0;
 }
 
+.mine
 .my_love02 {
   width: 100%;
   margin: 0 auto;
   padding: 30px;
   background-color: #f5f5f5;
-}
-
-.my_love02 {
-  padding-top: 30px;
 }
 
 .mine_me h3,
@@ -378,6 +455,7 @@ profile
   list-style: none;
 }
 
+<<<<<<< HEAD
 .skill-item {
   display: block;
 }
@@ -389,6 +467,8 @@ profile
   color: #2F2F2F;
 }
 
+=======
+>>>>>>> works_php
 .line {
   width: 90%;
   height: 10px;
@@ -396,6 +476,7 @@ profile
   margin: 30px auto 0;
   
 }
+
 /* ----------------------- */
 /* works.html */
 /* ----------------------- */
@@ -460,7 +541,7 @@ profile
   margin: 0 auto;
   text-align: center;
   border: #2F2F2F  3px solid;
-  border-radius: 6px;
+  border-radius: 55px;
   background-color: #FFF;
   margin-top: 60px;
 }
@@ -542,6 +623,7 @@ janken app 画像右共通
 
 .grid_b {
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: 40% 60%; /* 左60%, 右40% */
   grid-auto-flow: column;
   width: 100%;
@@ -552,6 +634,27 @@ janken app 画像右共通
   display: grid;
   grid-template-rows: 60% 40%; /* 上60%テキスト, 下40%リンク */
   min-height: 600px;
+=======
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 600px; /* 高さを1行分に固定 */
+  grid-auto-flow: column;   /* 要素を横にしか並べない設定 */
+  width: 100%;
+  min-height: 600px;
+} 
+
+.grid_left-b {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-rows: 60% 40%; /* 上60%テキスト, 下40%リンク */
+  height: 100%;
+}
+
+.grid_right-b img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;      
+>>>>>>> works_php
 }
 
 .attend {
@@ -561,7 +664,38 @@ janken app 画像右共通
   justify-content: center;
 }
 
+<<<<<<< HEAD
 .grid_right-b {
+=======
+.janken_attend h3 {
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.janken_attend p{
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.more_jump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 2;
+  margin-top: 30px;
+}
+
+.grid_right_a {
+>>>>>>> works_php
   display: flex;
   justify-content: center;
   align-items: center;
@@ -573,10 +707,18 @@ janken app 画像右共通
 .janken_top img {
   max-width: 100%;
   height: auto;
+<<<<<<< HEAD
   display: block; /* 必要なら */
 }
 /* ====================
 memo app　画像左
+=======
+  display: block;
+  object-fit: cover; 
+}
+/* ====================
+memo app　作品 右
+>>>>>>> works_php
 ==================== */
 .memoapp {
   width: 100%;
@@ -584,6 +726,7 @@ memo app　画像左
   padding: 30px;
 }
 
+<<<<<<< HEAD
 .memo_grid_left-a img {
   width: 100%;
   height: auto;
@@ -591,27 +734,88 @@ memo app　画像左
 
 /* ====================
 canvas app　画像右
+=======
+.memo_attend {
+  padding: 60px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.memo_attend h3 {
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.memo_attend p{
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.more,
+.more_jump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====================
+canvas app　作品  左
+>>>>>>> works_php
 ==================== */
 .canvasapp {
-  display: flex;
   width: 100%;
   margin: 0 auto;
+  padding: 30px;
+  display: flex;
   padding: 80px 60px;
   background-color: #f5f5f5;
 }
 
+<<<<<<< HEAD
 
 
 .grid_right-b {
   margin-left: 100px;
   grid-column: 2 / 3;
+=======
+.canvas_attend {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin: 20px;
+  padding: 60px 30px 30px 30px;
+}
+
+.canvas_attend h3 {
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.canvas_attend p {
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.more {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+>>>>>>> works_php
 }
 
 .canvas_top img {
   width: 50%;
   height: auto;
   display: block;
-  object-fit: cover; 
+  object-fit: contain; 
 }
 
 
@@ -622,17 +826,82 @@ udedameshi app　画像左
 .udedameshiapp {
   width: 100%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 60px;
 }
 
+<<<<<<< HEAD
 /*phpとの境*/
+=======
+.grid_b {
+  display: grid;
+  grid-template-columns: 60% 40%; 
+  width: 100%;
+  height: 500px;
+}
+
+.grid_left-b {
+  grid-column: 1 / 2;
+  height: 100%;
+  padding: 40px;
+}
+
+.grid_left-b img {
+  display: block;
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+  margin-left: 90px;
+}
+
+/* 右カラムを内部で上下分割 */
+.grid_right-b {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 60% 40%; 
+  height: 100%;
+}
+
+.udedameshiapp_attend {
+  grid-row: 1 / 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.udedameshiapp_attend h3 {
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.udedameshiapp_attend p {
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.more_jump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more {
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+>>>>>>> works_php
 
 .line_work {
   border-bottom: #b8860b 15px dashed;
 }
 
 /* ====================
-php
+works_p.html
 ==================== */
 .php {
   width: 100%;;
@@ -644,6 +913,83 @@ php
 .php h3{
   font-size: 4rem;
   font-weight: 500;
+}
+
+/* ====================
+php mail  作品左
+==================== */
+.php_mail {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.grid_left-a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;      
+}
+
+.phpmail_atend h3 {
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 20px 30px;
+}
+
+.phpmail_atend p {
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 20px 50px;
+}
+
+.more,
+.more_jump {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====================
+php form　作品右
+==================== */
+
+.form_attend {
+  padding: 60px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_top img {
+  object-fit: cover;
+}
+
+.form_attend h3 {
+  color: #2F2F2F;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 20px 30px;
+}
+
+.form_attend p {
+  margin-top: 10px;
+  color: #2F2F2F;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 20px 50px;
+}
+
+.grid_b-form {
+  display: grid;
+  grid-template-columns: 60% 40%; 
+  width: 100%;
+  align-items: center;
+  height: 900px;
+  background-color: #f5f5f5;
 }
 
 
@@ -669,14 +1015,14 @@ footer > p {
 }
 
 .link {
-  width: 500px;
+  width: 300px;
   height: auto;
   font-family: "Titillium Web";
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 auto;
   text-align: center;
   border: #2F2F2F 2px solid;
-  border-radius: 2px;
+  border-radius: 55px;
   background-color: #FFF;
 }
